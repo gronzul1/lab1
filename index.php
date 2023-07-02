@@ -113,11 +113,7 @@ function AddEmployee($connection, $name, $address) {
    $n = mysqli_real_escape_string($connection, $name);
    $a = mysqli_real_escape_string($connection, $address);
 
- 
-
    $query = "INSERT INTO EMPLOYEES (NAME, ADDRESS) VALUES ('$n', '$a');";
-
- 
 
    if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
 }
@@ -126,6 +122,10 @@ function AddEmployee($connection, $name, $address) {
 
 /* Check whether the table exists and, if not, create it. */
 function VerifyEmployeesTable($connection, $dbName) {
+  
+  $query = "CREATE DATABASE IF NOT EXISTS ".$dbName.";"
+  if(!mysqli_query($connection, $query)) echo("<p>Error creating db.</p>");
+  
   if(!TableExists("EMPLOYEES", $connection, $dbName))
   {
      $query = "CREATE TABLE EMPLOYEES (
@@ -133,8 +133,6 @@ function VerifyEmployeesTable($connection, $dbName) {
          NAME VARCHAR(45),
          ADDRESS VARCHAR(90)
        )";
-
- 
 
      if(!mysqli_query($connection, $query)) echo("<p>Error creating table.</p>");
   }
@@ -155,8 +153,6 @@ function TableExists($tableName, $connection, $dbName) {
  
 
   if(mysqli_num_rows($checktable) > 0) return true;
-
- 
 
   return false;
 }

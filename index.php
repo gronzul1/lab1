@@ -7,7 +7,7 @@
 </head> 
 <body> 
     <h1>Welcome to Autoscale Instance</h1> 
-    <div>Server: <h3>Hostname $(hostname -f) </h3></div> 
+    <div>Server Hostname:<h3> <?php echo gethostname(); ?> </h3></div> 
     <div> 
         Go to <a href="webapp.php">Lab Page</a> 
     </div> 

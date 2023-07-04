@@ -20,3 +20,5 @@ cd lab1
 cp inc/dbinfo.inc /var/www/inc/
 cp index.html /var/www/html/
 cp webapp.php /var/www/html/
+
+sed '10s|\(.*\)|<div>Server: <h3>Hostname $(hostname -f) </h3></div> \1|' index.html

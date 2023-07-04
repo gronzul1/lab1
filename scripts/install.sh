@@ -17,4 +17,4 @@ find /var/www -type f -exec sudo chmod 0664 {} \;
 mkdir /var/www/inc
 cp lab1/inc/dbinfo.inc /var/www/inc/
 cp lab1/index.html /var/www/html/
-cp lab1/index.php /var/www/html/
+cp lab1/webapp.php /var/www/html/

@@ -123,9 +123,6 @@ function AddEmployee($connection, $name, $address) {
 /* Check whether the table exists and, if not, create it. */
 function VerifyEmployeesTable($connection, $dbName) {
   
-  $query = "CREATE DATABASE IF NOT EXISTS ".$dbName.";"
-  if(!mysqli_query($connection, $query)) echo("<p>Error creating db.</p>");
-  
   if(!TableExists("EMPLOYEES", $connection, $dbName))
   {
      $query = "CREATE TABLE EMPLOYEES (

@@ -8,6 +8,18 @@ Server:
 echo gethostname();
 ?>
 </h2>
+<h3>
+Username:
+<?php
+echo DB_USERNAME;
+?>
+</h3>
+<h3>
+DB Server:
+<?php
+echo DB_SERVER
+?>
+</h3>
 <?php
   /* Connect to MySQL and select the database. */
   $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);

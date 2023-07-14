@@ -13,7 +13,7 @@ cd /mnt/efs
 sudo git clone https://github.com/gronzul1/lab1.git
 
 #cp /mnt/efs/install_with_EFS.sh  .
-sudo chmod a+x ./lab1/install_with_EFS.sh
+sudo chmod a+x ./lab1/scripts/install_with_EFS.sh
 
 #deploy app
-. ./lab1/install_with_EFS.sh
+. ./lab1/scripts/install_with_EFS.sh

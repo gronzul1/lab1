@@ -6,7 +6,7 @@ sudo yum install -y amazon-efs-utils
 
 #mount efs
 sudo mkdir /mnt/efs
-sudo mount -t efs -o tls fs-04f7c2f12fc049689:/ /mnt/efs        #!!! Change with new ref
+sudo mount -t efs -o tls fs-0778dd8e1eab343c0:/ /mnt/efs 
 
 #clone repo
 cd /mnt/efs

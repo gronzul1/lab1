@@ -15,12 +15,6 @@ sudo chown  ec2-user:apache /var/www -R
 find /var/www -type d -exec sudo chmod 2775 {} \;
 find /var/www -type f -exec sudo chmod 0664 {} \;
 
-# #Install efs utils
-# sudo yum install -y amazon-efs-utils
-# sudo mkdir /mnt/efs
-# sudo mount -t efs -o tls fs-08276dd8be9678809:/ /mnt/efs
-
-
 #deploy app
 mkdir /var/www/inc
 
